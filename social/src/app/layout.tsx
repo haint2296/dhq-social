@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import { NextThemesProviders } from "@/shared/providers/themes";
 
+import { Analytics } from '@vercel/analytics/next';
+
 /**
  * @description Styles
  */
@@ -34,6 +36,7 @@ export default function RootLayout({
       className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}
     >
       <NextThemesProviders>{children}</NextThemesProviders>
+      <Analytics />
     </body>
   </html>
   );
